@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    font-family: 'Inter',
+        sans-serif;
+}
+
+.cta-btn {
+    width: 120px;
+    /* height: 30px; */
+    background: linear-gradient(180deg, #24C6DC 0%, #514A9D 100%);
+    border-radius: 12.07px;
+    padding: 15px 10px;
+    /* gap: 25.26px; */
+}
