@@ -13,12 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-black">
-    <nav class="flex justify-between items-center px-14 pt-8">
+<body class="bg-black  mx-auto w-11/12">
+    <nav class="flex justify-between items-center pt-8">
         <div class="logo">
             <img src="/images/Logo.svg" alt="logo" style="width:75px;">
         </div>
-        <div class="nav-links flex items-center space-x-8 text-white">
+        <div class="nav-links flex items-center space-x-8 text-white text-sm">
             <a href="#" class="nav-link">About Us</a>
             <a href="#" class="nav-link">Our Services</a>
             <a href="#" class="nav-link">Pricing</a>
@@ -26,16 +26,59 @@
             <button class="cta-btn inline-block">Get Started</button>
         </div>
     </nav>
-    <section class="hero-container">
-        <div class="hero"></div>
-        <div class="sponsors"></div>
-    </section>
-    <section class="services"></section>
-    <section class="pricing"></section>
-    <section class="perks"></section>
-    <section class="testimonials"></section>
-    <section class="cta"></section>
-    <footer class="footer"></footer>
+    <main class="container">
+        <section class="hero-container">
+            <div class="hero flex justify-between pt-5">
+                <div class="hero-left w-1/2">
+                    <p class="caption caption-span"> <img src="/images/asterisk.svg" alt="asterisk icon"> Jump start
+                        your
+                        growth</p>
+                    <h1 class="hero-header max-w-sm text-4xl font-bold pt-5">We teach everyone how to play <span
+                            class="caption-span">Basketball</span> the
+                        right way.
+                    </h1>
+                    <p class="hero-paragraph text-sm max-w-xs pt-5 w-2/3">
+                        Get uncommon skills, leadership traits, and mindset needed to stand out and get noticed- all
+                        within one plan.
+                    </p>
+                    <div class="email-form pt-5">
+                        <form onsubmit="">
+                            <input type="email" placeholder="email">
+                            <button class="cta-btn"> Submit </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img class="ml-10" src="/images/hero-img.png" alt="hero image">
+                </div>
+            </div>
+            <div class="sponsors py-20 flex justify-between items-center">
+                <div class="sponsor-item border-t pt-2">
+                    <p class="text-xs">
+                        Proud partner at Hubspot & Segment
+                    </p>
+                </div>
+                <div class="sponsor-item">
+                    <img src="/images/sponsors-logos/spalding.svg" alt="sponsor logo">
+                </div>
+                <div class="sponsor-item">
+                    <img src="/images/sponsors-logos/adidas.svg" alt="sponsor logo">
+                </div>
+                <div class="sponsor-item">
+                    <img src="/images/sponsors-logos/nba-finals.svg" alt="sponsor logo">
+                </div>
+                <div class="sponsor-item">
+                    <img src="/images/sponsors-logos/qbuzz.svg" alt="sponsor logo">
+                </div>
+            </div>
+        </section>
+        <section class="services"></section>
+        <section class="pricing"></section>
+        <section class="perks"></section>
+        <section class="testimonials"></section>
+        <section class="cta"></section>
+        <footer class="footer"></footer>
+    </main>
 </body>
 
 </html>
