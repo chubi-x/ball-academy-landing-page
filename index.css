@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-image: url("/images/blob.svg");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  color: white;
+}
+
+.caption {
+  font-size: 12px;
+}
+
+.caption img {
+  display: inline;
+}
+
+.caption-span {
+  background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.cta-btn {
+  width: 120px;
+  /* height: 30px; */
+  background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
+  border-radius: 12.07px;
+  padding: 10px 10px;
+  font-size: 12px;
+  /* gap: 25.26px; */
+}
+
+div.email-form input[type=email] {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid white;
+  background: black;
+  border-radius: 12.07px;
+  font-size: 12px;
+  outline: none;
+}
+
+div.hero-right img {
+  max-height: 450px;
+  /* margin: 0px; */
+  /* margin-left: 30px; */
+}
+
+div.sponsors img {
+  width: 100px;
+}
+
+section.stats {
+  position: relative;
+  /* left: 0px; */
+  right: 6%;
+  padding: 40px;
+  width: 100vw;
+  background: linear-gradient(180deg, rgba(36, 198, 220, 0.2) 0%, rgba(81, 74, 157, 0.2) 100%);
+}
+
+div.members-icon-container img {
+  width: 50px;
+}
+
+section.services .card {
+  position: relative;
+  height: 100px;
+  width: 200px;
+}
+section.services .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
+}
+
+/*# sourceMappingURL=index.css.map */
