@@ -32,7 +32,7 @@ body {
   width: 120px;
   /* height: 30px; */
   background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
-  border-radius: 12.07px;
+  border-radius: 10px;
   padding: 10px 10px;
   font-size: 12px;
   /* gap: 25.26px; */
@@ -62,31 +62,83 @@ div.sponsors img {
 section.stats {
   position: relative;
   /* left: 0px; */
-  right: 6%;
+  right: 6.5%;
   padding: 40px;
   width: 100vw;
   background: linear-gradient(180deg, rgba(36, 198, 220, 0.2) 0%, rgba(81, 74, 157, 0.2) 100%);
 }
 
-div.members-icon-container img {
+div.icon-container img {
   width: 50px;
 }
 
-section.services .card {
+section.services .services-card {
   position: relative;
-  height: 100px;
-  width: 200px;
+  height: 200px;
+  width: 250px;
+  padding: 20px;
+  border: 1.94px solid transparent;
+  background-color: black;
+  background-clip: padding-box;
+  border-radius: 12px;
+  transition: all 2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-section.services .card:before {
+section.services .services-card:before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+  margin: -1.94px;
   z-index: -1;
   border-radius: inherit;
   background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
+}
+section.services .services-card:hover {
+  background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
+}
+section.services .services-card h1 {
+  padding-top: 10px;
+  font-weight: bold;
+}
+section.services .services-card p {
+  padding-top: 20px;
+  font-size: 10px;
+  max-width: 200px;
+  text-align: center;
+}
+
+section.services .services-details .service-header-container h1 {
+  font-size: 25px;
+  font-weight: bold;
+  max-width: 400px;
+  @apply mt-2;
+}
+section.services .services-details p {
+  @apply max-w-md my-6;
+  font-size: 12px;
+}
+section.services .services-details img {
+  width: 250px;
+  height: auto;
+}
+section.services .services-details a {
+  @apply text-xs;
+  background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+section.services .services-details a img {
+  @apply ml-2;
+  display: inline;
+  width: 15px;
 }
 
 /*# sourceMappingURL=index.css.map */

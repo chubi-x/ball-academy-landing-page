@@ -5,11 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tailwindcss -i ./style.css -o ./css/index.css --watch --minify"
+    "tailwind": "tailwindcss -i ./index.css -o ./css/index.css --watch --minify",
+    "sass": "sass --watch style.scss index.css"
   },
   "author": "chubiyojo adejoh",
   "license": "ISC",
-  "dependencies": {
-    "tailwindcss": "^3.1.8"
+  "dependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.1.8",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "postcss-nested": "^5.0.6",
+    "postcss-scss": "^4.0.4"
   }
 }
