@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import "node_modules/tailwindcss/base";
 @import "node_modules/tailwindcss/components";
 @import "node_modules/tailwindcss/utilities";
@@ -11,6 +13,12 @@ body {
   background-repeat: no-repeat;
   background-size: 20%;
   color: white;
+  --gradient: linear-gradient(
+    180deg,
+    rgba(36, 198, 220, 0.2) 0%,
+    rgba(81, 74, 157, 0.2) 100%
+  );
+  --gradient-2: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
 }
 
 .caption {
@@ -22,7 +30,7 @@ body {
 }
 
 .caption-span {
-  background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
+  background: var(--gradient-2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -32,7 +40,7 @@ body {
 .cta-btn {
   width: 120px;
   /* height: 30px; */
-  background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
+  background: var(--gradient-2);
   border-radius: 10px;
   padding: 10px 10px;
   font-size: 12px;
@@ -61,17 +69,14 @@ div.sponsors img {
   width: 100px;
 }
 
-section.stats {
+section.stats,
+section.pricing {
   position: relative;
   /* left: 0px; */
   right: 6.5%;
   padding: 40px;
   width: 100vw;
-  background: linear-gradient(
-    180deg,
-    rgba(36, 198, 220, 0.2) 0%,
-    rgba(81, 74, 157, 0.2) 100%
-  );
+  background: var(--gradient);
 }
 
 div.icon-container img {
@@ -103,10 +108,10 @@ section.services .services-card {
     margin: -1.94px;
     z-index: -1;
     border-radius: inherit;
-    background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
+    background: var(--gradient-2);
   }
   &:hover {
-    background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
+    background: var(--gradient-2);
   }
   h1 {
     padding-top: 10px;
@@ -136,7 +141,7 @@ section.services .services-details {
   }
   a {
     @apply text-xs;
-    background: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
+    background: var(--gradient-2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -145,6 +150,121 @@ section.services .services-details {
       @apply ml-2;
       display: inline;
       width: 15px;
+    }
+  }
+}
+
+section.pricing {
+  background: var(--gradient);
+  height: 400px;
+  padding: 0px;
+  div.pricing-group {
+    width: 40%;
+  }
+  div.pricing-details {
+    background-color: black;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+  }
+  div.pricing-category h5 {
+    font-weight: bold;
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  div.pricing-slider {
+    position: relative;
+    // width: 500px;
+    output {
+      position: absolute;
+      bottom: 40%;
+      left: 52%;
+      font-size: 12px;
+      //   padding: 4px 12px;
+      transform: translateX(-90%);
+      background: var(--gradient-2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    input[type="range"] {
+      // VARIABLES
+      $track-color: var(--gradient-2) !default;
+      $thumb-color: white !default;
+
+      $thumb-radius: 12px !default;
+      $thumb-height: 20px !default;
+      $thumb-width: 20px !default;
+
+      $track-width: 100% !default;
+      $track-height: 12px !default;
+      $track-border-width: 2px !default;
+      $track-radius: 100px !default;
+
+      // STYLES
+
+      -webkit-appearance: none;
+      width: 100%;
+      background: transparent;
+      margin: 0px 10px;
+
+      @mixin track {
+        cursor: default;
+        height: $track-height;
+        transition: all 0.2s ease;
+        width: $track-width;
+      }
+
+      @mixin thumb {
+        background: $thumb-color;
+        border-radius: $thumb-radius;
+        box-sizing: border-box;
+        cursor: default;
+        height: $thumb-height;
+        width: $thumb-width;
+      }
+
+      &::-moz-focus-outer {
+        border: 0;
+      }
+
+      &:focus {
+        outline: 0;
+
+        &::-ms-fill-lower {
+          background: $track-color;
+        }
+      }
+
+      &::-webkit-slider-runnable-track {
+        @include track;
+        background: $track-color;
+        border-radius: $track-radius;
+      }
+
+      &::-webkit-slider-thumb {
+        @include thumb;
+        -webkit-appearance: none;
+        margin-top: (
+          math.div((-$track-border-width * 2 + $track-height), 2) -
+            math.div($thumb-height, 2)
+        );
+      }
+
+      &::-moz-range-track {
+        @include track;
+        background: $track-color;
+        border-radius: $track-radius;
+        height: math.div($track-height, 2);
+      }
+
+      &::-moz-range-thumb {
+        @include thumb;
+      }
     }
   }
 }

@@ -100,7 +100,7 @@
                 </div>
             </div>
         </section>
-        <section class="services pt-20 px-20 flex flex-col items-center">
+        <section class="services py-24 px-20 flex flex-col items-center">
             <div class="how-we-help w-full flex flex-col justify-center">
                 <div class="heading mx-auto w-1/2 flex flex-col justify-center">
                     <h1 class="text-center text-4xl font-bold max-w-lg">How can we help your game?</h1>
@@ -198,12 +198,63 @@
                 </div>
             </div>
         </section>
-        <section class="pricing"></section>
+        <section class="pricing flex justify-center items-center">
+            <div class="pricing-group flex justify-center items-center">
+                <div class="pricing-details flex flex-col items-center">
+                    <div class="pricing-header text-2xl font-bold p-8">
+                        <h1>Pricing</h1>
+                    </div>
+                    <div class="pricing-category flex justify-between space-x-16">
+                        <div class="part-time">
+                            <h3 class="text-sm">Part-Time</h3>
+                            <h5 class="text-lg pt-2">$4,000/mo</h5>
+
+                        </div>
+                        <div class="full-time">
+                            <h3 class="text-sm">Full-Time</h3>
+                            <h5 class="text-lg pt-2">$7,500/mo</h5>
+                        </div>
+                    </div>
+                    <div class="pricing-slider pt-16 px-8 w-full flex justify-center">
+                        <label for="pricing-slider"></label>
+
+                        <span class="caption-span text-xs">1</span>
+                        <output id="bubble"></output>
+
+                        <input type="range" name="pricing-slider" id="pricing-slider" min="1" max="30" value="15">
+
+                        <span class=" caption-span text-xs">30+</span>
+                    </div>
+                </div>
+                <div class="pricing-cta">
+
+                </div>
+            </div>
+        </section>
         <section class="perks"></section>
         <section class="testimonials"></section>
         <section class="cta"></section>
         <footer class="footer"></footer>
     </main>
+
+    <script>
+        const input = document.getElementById('pricing-slider');
+        const bubble = document.getElementById('bubble')
+
+        function changeVal() {
+            const val = input.value;
+            const min = input.min;
+            const max = input.max;
+
+            const newVal = Math.ceil(((val - min) * 100) / (max - min));
+            bubble.innerHTML = `${val} ${val==1 ? 'day' : 'days'}`;
+
+        }
+        input.addEventListener('input', () => {
+            changeVal()
+        })
+        changeVal()
+    </script>
 </body>
 
 </html>
