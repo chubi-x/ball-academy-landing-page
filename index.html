@@ -110,7 +110,7 @@
                     </p>
                 </div>
                 <div class="cards pt-10 flex justify-center space-x-6  cursor-pointer">
-                    <div class="services-card">
+                    <div class="card">
                         <div class="icon-container">
                             <img src="/images/services/scoring.svg" alt="services icon">
                         </div>
@@ -121,7 +121,7 @@
                             <p>Become an unstoppable scorer from every position on the court.</p>
                         </div>
                     </div>
-                    <div class="services-card">
+                    <div class="card">
                         <div class="icon-container">
                             <img src="/images/services/playmaker.svg" alt="services icon">
                         </div>
@@ -132,7 +132,7 @@
                             <p>Be the player your coach trusts with the ball in pressure situations.</p>
                         </div>
                     </div>
-                    <div class="services-card">
+                    <div class="card">
                         <div class="icon-container">
                             <img src="/images/services/skills.svg" alt="services icon">
                         </div>
@@ -199,7 +199,7 @@
             </div>
         </section>
         <section class="pricing flex justify-center items-center">
-            <div class="pricing-group flex justify-center items-center">
+            <div class="pricing-group flex flex-col justify-center items-center">
                 <div class="pricing-details flex flex-col items-center">
                     <div class="pricing-header text-2xl font-bold p-8">
                         <h1>Pricing</h1>
@@ -226,12 +226,73 @@
                         <span class=" caption-span text-xs">30+</span>
                     </div>
                 </div>
-                <div class="pricing-cta">
-
+                <div class="pricing-cta bg-black p-4 px-10 space-x-6 flex items-center">
+                    <p class="text-sm">Ready to get started? </p>
+                    <button class="cta-btn">Get Started</button>
                 </div>
             </div>
         </section>
-        <section class="perks"></section>
+        <section class="perks flex justify-between p-24 py-28">
+            <div class="text-container flex flex-col self-center">
+                <h1 class="text-4xl text-white font-bold pb-6">Change your game with the new style</h1>
+                <p class="text-xs max-w-xs">
+                    Improve your overall fundamentals, skill mastery, teamwork, discipline and overall basketball IQ
+                </p>
+                <div class="checklist-container my-6">
+                    <div class="checklist"><img src="/images/perks/check.svg" alt="check mark"></div>
+                    <p class="text-xs max-w-xs">Basketball Certificate</p>
+
+                    <div class="checklist"><img src="/images/perks/check.svg" alt="check mark"></div>
+                    <p class="text-xs max-w-xs">Improved game style</p>
+                </div>
+                <div class="button-container">
+                    <button class="cta-btn">Get Started</button>
+
+                </div>
+            </div>
+            <div class="perks-cards">
+                <div class="card">
+                    <div class="icon-container">
+                        <img src="/images/perks/ball.svg" alt="icon">
+                    </div>
+                    <div class="text">
+                        <h1>Ball Handling</h1>
+                        <p>This integrates dribbling, passing and decision-making.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon-container">
+                        <img src="/images/perks/idea.svg" alt="icon">
+                    </div>
+                    <div class="text">
+                        <h1>Game IQ</h1>
+                        <p> This the ability play the game and adapt to any situation. </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon-container">
+                        <img src="/images/perks/fund.svg" alt="icon">
+                    </div>
+                    <div class="text">
+                        <h1>Fundamentals</h1>
+                        <p>This is the basic things you’re required to know before playing.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon-container">
+                        <img src="/images/perks/defense.svg" alt="icon">
+                    </div>
+                    <div class="text">
+                        <h1>Defense</h1>
+                        <p>This is stopping the opponents from doing their plays</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="testimonials"></section>
         <section class="cta"></section>
         <footer class="footer"></footer>
@@ -245,9 +306,13 @@
             const val = input.value;
             const min = input.min;
             const max = input.max;
+            const thumbHalfWidth = 10;
+            const inputWidth = input.offsetWidth;
 
             const newVal = Math.ceil(((val - min) * 100) / (max - min));
             bubble.innerHTML = `${val} ${val==1 ? 'day' : 'days'}`;
+
+            // bubble.style.left = `calc(${newVal}% + (${10 - newVal * 0.3}px))`;
 
         }
         input.addEventListener('input', () => {
