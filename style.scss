@@ -7,7 +7,13 @@
 * {
   font-family: "Inter", sans-serif;
 }
-
+@mixin text-bg {
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 body {
   background-image: url("/images/blob.svg");
   background-repeat: no-repeat;
@@ -21,6 +27,13 @@ body {
   --gradient-2: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
 }
 
+nav {
+  div.logo {
+    position: relative;
+    animation-name: jump;
+    animation-duration: 2s;
+  }
+}
 .caption {
   font-size: 12px;
 }
@@ -30,11 +43,7 @@ body {
 }
 
 .caption-span {
-  background: var(--gradient-2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  @include text-bg;
 }
 
 .cta-btn {
@@ -46,46 +55,22 @@ body {
   font-size: 12px;
   /* gap: 25.26px; */
 }
-
-div.email-form input[type="email"] {
-  width: 300px;
-  height: 40px;
-  padding: 10px;
-  border: 1px solid white;
-  background: black;
-  border-radius: 12.07px;
-  font-size: 12px;
-
-  outline: none;
+div.hero {
+  div.hero-right {
+    // width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img {
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
 }
-
-div.hero-right img {
-  max-height: 450px;
-  /* margin: 0px; */
-  /* margin-left: 30px; */
-}
-
-div.sponsors img {
-  width: 100px;
-}
-
-section.stats,
-section.pricing {
+.card {
   position: relative;
-  /* left: 0px; */
-  right: 6.5%;
-  padding: 40px;
-  width: 100vw;
-  background: var(--gradient);
-}
-
-div.icon-container img {
-  width: 50px;
-}
-
-section.services .services-card {
-  position: relative;
-  height: 200px;
+  height: 250px;
   width: 250px;
   padding: 20px;
   border: 1.94px solid transparent;
@@ -124,6 +109,42 @@ section.services .services-card {
     text-align: center;
   }
 }
+div.email-form input[type="email"] {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid white;
+  background: black;
+  border-radius: 12.07px;
+  font-size: 12px;
+
+  outline: none;
+}
+
+div.hero-right img {
+  max-height: 450px;
+  /* margin: 0px; */
+  /* margin-left: 30px; */
+}
+
+div.sponsors img {
+  width: 100px;
+}
+
+section.stats,
+section.pricing {
+  position: relative;
+  /* left: 0px; */
+  right: 6.5%;
+  padding: 40px;
+  width: 100vw;
+  background: var(--gradient);
+}
+
+div.icon-container img {
+  width: 50px;
+}
+
 section.services .services-details {
   .service-header-container h1 {
     font-size: 25px;
@@ -141,11 +162,7 @@ section.services .services-details {
   }
   a {
     @apply text-xs;
-    background: var(--gradient-2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    @include text-bg;
     img {
       @apply ml-2;
       display: inline;
@@ -160,6 +177,11 @@ section.pricing {
   padding: 0px;
   div.pricing-group {
     width: 40%;
+    div.pricing-cta {
+      position: relative;
+      left: 150px;
+      bottom: 35px;
+    }
   }
   div.pricing-details {
     background-color: black;
@@ -169,11 +191,7 @@ section.pricing {
   }
   div.pricing-category h5 {
     font-weight: bold;
-    background: var(--gradient-2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    @include text-bg;
   }
   div.pricing-slider {
     position: relative;
@@ -185,11 +203,7 @@ section.pricing {
       font-size: 12px;
       //   padding: 4px 12px;
       transform: translateX(-90%);
-      background: var(--gradient-2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
+      @include text-bg;
     }
     input[type="range"] {
       // VARIABLES
@@ -266,5 +280,76 @@ section.pricing {
         @include thumb;
       }
     }
+  }
+}
+section.perks {
+  height: 700px;
+  div.text-container {
+    width: 40%;
+  }
+  div.checklist-container {
+    display: grid;
+    align-content: center;
+    grid-template-columns: 30px auto;
+  }
+  div.checklist {
+    background: var(--gradient-2);
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.perks-cards {
+    width: 50%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 40px;
+    row-gap: 30px;
+  }
+  div.card {
+    width: 100%;
+    height: 90%;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    img {
+      width: 40px;
+    }
+    h1 {
+      padding-top: 15px;
+      font-size: 17px;
+    }
+
+    p {
+      padding: 10px 0px;
+      text-align: left;
+      max-width: 170px;
+    }
+    a {
+      font-size: 10px;
+      text-transform: uppercase;
+      @include text-bg;
+    }
+  }
+}
+
+// ANIMATIONS
+@keyframes jump {
+  0% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 0px;
+  }
+  75% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 0px;
   }
 }

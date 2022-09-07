@@ -18,6 +18,12 @@ body {
   --gradient-2: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
 }
 
+nav div.logo {
+  position: relative;
+  animation-name: jump;
+  animation-duration: 2s;
+}
+
 .caption {
   font-size: 12px;
 }
@@ -42,6 +48,58 @@ body {
   padding: 10px 10px;
   font-size: 12px;
   /* gap: 25.26px; */
+}
+
+div.hero div.hero-right {
+  height: 100%;
+  overflow: hidden;
+}
+div.hero div.hero-right img {
+  transition: transform 0.5s;
+}
+div.hero div.hero-right img:hover {
+  transform: scale(1.2);
+}
+
+.card {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  padding: 20px;
+  border: 1.94px solid transparent;
+  background-color: black;
+  background-clip: padding-box;
+  border-radius: 12px;
+  transition: all 2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: -1.94px;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--gradient-2);
+}
+.card:hover {
+  background: var(--gradient-2);
+}
+.card h1 {
+  padding-top: 10px;
+  font-weight: bold;
+}
+.card p {
+  padding-top: 20px;
+  font-size: 10px;
+  max-width: 200px;
+  text-align: center;
 }
 
 div.email-form input[type=email] {
@@ -79,47 +137,6 @@ div.icon-container img {
   width: 50px;
 }
 
-section.services .services-card {
-  position: relative;
-  height: 200px;
-  width: 250px;
-  padding: 20px;
-  border: 1.94px solid transparent;
-  background-color: black;
-  background-clip: padding-box;
-  border-radius: 12px;
-  transition: all 2s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-section.services .services-card:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: -1.94px;
-  z-index: -1;
-  border-radius: inherit;
-  background: var(--gradient-2);
-}
-section.services .services-card:hover {
-  background: var(--gradient-2);
-}
-section.services .services-card h1 {
-  padding-top: 10px;
-  font-weight: bold;
-}
-section.services .services-card p {
-  padding-top: 20px;
-  font-size: 10px;
-  max-width: 200px;
-  text-align: center;
-}
-
 section.services .services-details .service-header-container h1 {
   font-size: 25px;
   font-weight: bold;
@@ -155,6 +172,11 @@ section.pricing {
 }
 section.pricing div.pricing-group {
   width: 40%;
+}
+section.pricing div.pricing-group div.pricing-cta {
+  position: relative;
+  left: 150px;
+  bottom: 35px;
 }
 section.pricing div.pricing-details {
   background-color: black;
@@ -234,6 +256,78 @@ section.pricing div.pricing-slider input[type=range]::-moz-range-thumb {
   cursor: default;
   height: 20px;
   width: 20px;
+}
+
+section.perks {
+  height: 700px;
+}
+section.perks div.text-container {
+  width: 40%;
+}
+section.perks div.checklist-container {
+  display: grid;
+  align-content: center;
+  grid-template-columns: 30px auto;
+}
+section.perks div.checklist {
+  background: var(--gradient-2);
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.perks div.perks-cards {
+  width: 50%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  column-gap: 40px;
+  row-gap: 30px;
+}
+section.perks div.card {
+  width: 100%;
+  height: 90%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+section.perks div.card img {
+  width: 40px;
+}
+section.perks div.card h1 {
+  padding-top: 15px;
+  font-size: 17px;
+}
+section.perks div.card p {
+  padding: 10px 0px;
+  text-align: left;
+  max-width: 170px;
+}
+section.perks div.card a {
+  font-size: 10px;
+  text-transform: uppercase;
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 0px;
+  }
+  75% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 0px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
