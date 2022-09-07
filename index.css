@@ -24,6 +24,12 @@ nav div.logo {
   animation-duration: 2s;
 }
 
+nav div.logo {
+  position: relative;
+  animation-name: jump;
+  animation-duration: 2s;
+}
+
 .caption {
   font-size: 12px;
 }
@@ -137,6 +143,41 @@ div.icon-container img {
   width: 50px;
 }
 
+div.email-form input[type=email] {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid white;
+  background: black;
+  border-radius: 12.07px;
+  font-size: 12px;
+  outline: none;
+}
+
+div.hero-right img {
+  max-height: 450px;
+  /* margin: 0px; */
+  /* margin-left: 30px; */
+}
+
+div.sponsors img {
+  width: 100px;
+}
+
+section.stats,
+section.pricing {
+  position: relative;
+  /* left: 0px; */
+  right: 6.5%;
+  padding: 40px;
+  width: 100vw;
+  background: var(--gradient);
+}
+
+div.icon-container img {
+  width: 50px;
+}
+
 section.services .services-details .service-header-container h1 {
   font-size: 25px;
   font-weight: bold;
@@ -172,6 +213,11 @@ section.pricing {
 }
 section.pricing div.pricing-group {
   width: 40%;
+}
+section.pricing div.pricing-group div.pricing-cta {
+  position: relative;
+  left: 150px;
+  bottom: 35px;
 }
 section.pricing div.pricing-group div.pricing-cta {
   position: relative;
@@ -266,8 +312,9 @@ section.perks div.text-container {
 }
 section.perks div.checklist-container {
   display: grid;
-  align-content: center;
+  align-items: center;
   grid-template-columns: 30px auto;
+  grid-template-rows: 30px auto;
 }
 section.perks div.checklist {
   background: var(--gradient-2);
@@ -316,6 +363,107 @@ section.perks div.card a {
 }
 section.perks div.card:hover a {
   -webkit-text-fill-color: white;
+}
+
+section.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.testimonials div.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.testimonials div.testimonials-container div.header {
+  margin: 50px;
+  text-align: center;
+}
+section.testimonials div.testimonials-container div.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+section.testimonials div.testimonials-container div.header p {
+  font-size: 12px;
+  margin: 10px 0px;
+}
+section.testimonials div.testimonials-container div.testimonial-card {
+  background: var(--gradient-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  color: #d7d7d7;
+}
+section.testimonials div.testimonials-container div.testimonial-card div.icon-container {
+  margin-bottom: 30px;
+}
+section.testimonials div.testimonials-container div.testimonial-card div.icon-container img {
+  width: 70px;
+}
+section.testimonials div.testimonials-container div.testimonial-card div.name-rating {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.testimonials div.testimonials-container div.testimonial-card div.name-rating img {
+  width: 100px;
+}
+section.testimonials div.testimonials-container div.testimonial-card div.testimony {
+  padding: 10px 60px;
+  font-size: 13px;
+  text-align: center;
+}
+section.testimonials div.slider-buttons {
+  margin: 50px;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.testimonials div.slider-buttons > div {
+  padding: 5px;
+  cursor: pointer;
+}
+section.testimonials div.slider-buttons .control-container {
+  transition: background 0.5s;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  padding: 0px 17px;
+}
+section.testimonials div.slider-buttons .control-container:hover {
+  background: white;
+}
+section.testimonials div.slider-buttons .control-container:hover span {
+  background: black;
+}
+section.testimonials div.slider-buttons .top,
+section.testimonials div.slider-buttons .bottom {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  border-radius: 30px;
+  background: white;
+}
+section.testimonials div.slider-buttons .top {
+  rotate: 45deg;
+}
+section.testimonials div.slider-buttons .bottom {
+  transform: translateX(5px);
+  rotate: -45deg;
+  bottom: 14px;
+  right: 4px;
+}
+section.testimonials div.slider-buttons .prev {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 @keyframes jump {
