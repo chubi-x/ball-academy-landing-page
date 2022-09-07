@@ -34,6 +34,13 @@ nav {
     animation-duration: 2s;
   }
 }
+nav {
+  div.logo {
+    position: relative;
+    animation-name: jump;
+    animation-duration: 2s;
+  }
+}
 .caption {
   font-size: 12px;
 }
@@ -145,6 +152,42 @@ div.icon-container img {
   width: 50px;
 }
 
+div.email-form input[type="email"] {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid white;
+  background: black;
+  border-radius: 12.07px;
+  font-size: 12px;
+
+  outline: none;
+}
+
+div.hero-right img {
+  max-height: 450px;
+  /* margin: 0px; */
+  /* margin-left: 30px; */
+}
+
+div.sponsors img {
+  width: 100px;
+}
+
+section.stats,
+section.pricing {
+  position: relative;
+  /* left: 0px; */
+  right: 6.5%;
+  padding: 40px;
+  width: 100vw;
+  background: var(--gradient);
+}
+
+div.icon-container img {
+  width: 50px;
+}
+
 section.services .services-details {
   .service-header-container h1 {
     font-size: 25px;
@@ -177,6 +220,11 @@ section.pricing {
   padding: 0px;
   div.pricing-group {
     width: 40%;
+    div.pricing-cta {
+      position: relative;
+      left: 150px;
+      bottom: 35px;
+    }
     div.pricing-cta {
       position: relative;
       left: 150px;
@@ -359,3 +407,4 @@ section.perks {
     bottom: 0px;
   }
 }
+
