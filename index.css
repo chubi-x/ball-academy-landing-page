@@ -500,5 +500,50 @@ section.testimonials div.slider-buttons .prev {
     transform: none;
   }
 }
+section.cta {
+  @apply px-32;
+}
+section.cta div.cta-container {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  background: var(--gradient-2);
+  height: 200px;
+  border-radius: 20px;
+  padding: 0px 70px;
+}
+section.cta div.cta-container div.text h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+section.cta div.cta-container div.text p {
+  font-size: 12px;
+  max-width: 250px;
+  padding-top: 15px;
+}
+section.cta div.cta-container div.contact-form {
+  align-self: center;
+}
+section.cta div.cta-container div.contact-form form {
+  height: 50px;
+  font-size: 12px;
+}
+section.cta div.cta-container div.contact-form form input[type=email] {
+  height: 90%;
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+  outline: none;
+  color: black;
+}
+section.cta div.cta-container div.contact-form form button {
+  background: black;
+  color: white;
+  height: 90%;
+  padding: 0px 20px;
+  position: relative;
+  right: 4px;
+  border-radius: 0px 10px 10px 0px;
+}
 
 /*# sourceMappingURL=index.css.map */
