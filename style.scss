@@ -403,7 +403,7 @@ section.testimonials {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    position: relative;
     div.header {
       margin: 50px;
       text-align: center;
@@ -418,18 +418,25 @@ section.testimonials {
     }
   }
   div.testimonial-slides {
-    display: flex;
+    // display: flex;
+    // justify-content: center;
+    width: 60%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
     div.testimonial-card {
       background: var(--gradient-2);
-      display: none;
+      position: absolute;
+      float: left;
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 500px;
+      width: 90%;
       height: 300px;
       border-radius: 20px;
       color: #d7d7d7;
-
+      transition: transform 0.5s ease;
       div.icon-container {
         margin-bottom: 30px;
 
@@ -451,19 +458,6 @@ section.testimonials {
         padding: 10px 60px;
         font-size: 13px;
         text-align: center;
-      }
-
-      &.active {
-        display: flex;
-      }
-      &.next {
-        animation-name: active-testimonial;
-        animation-duration: 1s;
-      }
-      &.prev {
-        animation-name: active-testimonial;
-        animation-duration: 1s;
-        animation-direction: reverse;
       }
     }
   }
