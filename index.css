@@ -371,6 +371,7 @@ section.testimonials {
   align-items: center;
 }
 section.testimonials div.testimonials-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -388,9 +389,12 @@ section.testimonials div.testimonials-container div.header p {
   font-size: 12px;
   margin: 10px 0px;
 }
-section.testimonials div.testimonials-container div.testimonial-card {
-  background: var(--gradient-2);
+section.testimonials div.testimonial-slides {
   display: flex;
+}
+section.testimonials div.testimonial-slides div.testimonial-card {
+  background: var(--gradient-2);
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -399,26 +403,38 @@ section.testimonials div.testimonials-container div.testimonial-card {
   border-radius: 20px;
   color: #d7d7d7;
 }
-section.testimonials div.testimonials-container div.testimonial-card div.icon-container {
+section.testimonials div.testimonial-slides div.testimonial-card div.icon-container {
   margin-bottom: 30px;
 }
-section.testimonials div.testimonials-container div.testimonial-card div.icon-container img {
+section.testimonials div.testimonial-slides div.testimonial-card div.icon-container img {
   width: 70px;
 }
-section.testimonials div.testimonials-container div.testimonial-card div.name-rating {
+section.testimonials div.testimonial-slides div.testimonial-card div.name-rating {
   font-size: 16px;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section.testimonials div.testimonials-container div.testimonial-card div.name-rating img {
+section.testimonials div.testimonial-slides div.testimonial-card div.name-rating img {
   width: 100px;
 }
-section.testimonials div.testimonials-container div.testimonial-card div.testimony {
+section.testimonials div.testimonial-slides div.testimonial-card div.testimony {
   padding: 10px 60px;
   font-size: 13px;
   text-align: center;
+}
+section.testimonials div.testimonial-slides div.testimonial-card.active {
+  display: flex;
+}
+section.testimonials div.testimonial-slides div.testimonial-card.next {
+  animation-name: active-testimonial;
+  animation-duration: 1s;
+}
+section.testimonials div.testimonial-slides div.testimonial-card.prev {
+  animation-name: active-testimonial;
+  animation-duration: 1s;
+  animation-direction: reverse;
 }
 section.testimonials div.slider-buttons {
   margin: 50px;
@@ -478,6 +494,14 @@ section.testimonials div.slider-buttons .prev {
   }
   100% {
     bottom: 0px;
+  }
+}
+@keyframes active-testimonial {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: none;
   }
 }
 

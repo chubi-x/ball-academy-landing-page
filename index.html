@@ -299,26 +299,67 @@
                     <h1>What our Players say</h1>
                     <p>Things that make us the best place to learn basketball</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="icon-container">
-                        <img src="/images/testimonials/person1.svg" alt="testimonial person picture">
-                    </div>
-                    <div class="name-rating">
-                        <div class="ratings">
-                            <img src="/images/testimonials/ratings.svg" alt="star ratings" />
+                <div class="testimonial-slides">
+                    <div class="testimonial-card">
+                        <div class="icon-container">
+                            <img src="/images/testimonials/person2.svg" alt="testimonial person picture">
                         </div>
-                        <div class="name">
-                            <h2>Solomon Ojonugwa</h2>
+                        <div class="name-rating">
+                            <div class="ratings">
+                                <img src="/images/testimonials/ratings2.svg" alt="star ratings" />
+                            </div>
+                            <div class="name">
+                                <h2>Elizabeth Holmes</h2>
+                            </div>
+                        </div>
+                        <div class="testimony">
+                            <p>
+                                I loved everything about this camp. the instructors were encouraging and positive and it
+                                really had an impact on my experience here.
+                            </p>
                         </div>
                     </div>
-                    <div class="testimony">
-                        <p>
-                            It was very good, learned a lot of new things to take back with me. Although it is a
-                            basketball camp, they teach you things that apply to all aspects of life.
-                        </p>
+                    <div class="testimonial-card active">
+                        <div class="icon-container">
+                            <img src="/images/testimonials/person1.svg" alt="testimonial person picture">
+                        </div>
+                        <div class="name-rating">
+                            <div class="ratings">
+                                <img src="/images/testimonials/ratings.svg" alt="star ratings" />
+                            </div>
+                            <div class="name">
+                                <h2>Solomon Ojonugwa</h2>
+                            </div>
+                        </div>
+                        <div class="testimony">
+                            <p>
+                                It was very good, learned a lot of new things to take back with me. Although it is a
+                                basketball camp, they teach you things that apply to all aspects of life.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="icon-container">
+                            <img src="/images/testimonials/person3.svg" alt="testimonial person picture">
+                        </div>
+                        <div class="name-rating">
+                            <div class="ratings">
+                                <img src="/images/testimonials/ratings2.svg" alt="star ratings" />
+                            </div>
+                            <div class="name">
+                                <h2>Chris Paul</h2>
+                            </div>
+                        </div>
+                        <div class="testimony">
+                            <p>
+                                Very caring and professional coaching that we received from the director and other
+                                supporting instructors. Impressive
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="slider-buttons">
                 <div class="prev">
                     <div class="control-container">
@@ -340,28 +381,7 @@
         <footer class="footer"></footer>
     </main>
 
-    <script>
-        const input = document.getElementById('pricing-slider');
-        const bubble = document.getElementById('bubble')
-
-        function changeVal() {
-            const val = input.value;
-            const min = input.min;
-            const max = input.max;
-            const thumbHalfWidth = 10;
-            const inputWidth = input.offsetWidth;
-
-            const newVal = Math.ceil(((val - min) * 100) / (max - min));
-            bubble.innerHTML = `${val} ${val==1 ? 'day' : 'days'}`;
-
-            // bubble.style.left = `calc(${newVal}% + (${10 - newVal * 0.3}px))`;
-
-        }
-        input.addEventListener('input', () => {
-            changeVal()
-        })
-        changeVal()
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
