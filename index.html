@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/397b00c9d6.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-black  mx-auto w-11/12">
-    <nav class="flex justify-between items-center pt-8">
+<body class="bg-black">
+    <nav class="flex justify-between items-center pt-8 mx-auto w-11/12">
         <div class="logo">
             <img src="/images/Logo.svg" alt="logo" style="width:75px;">
         </div>
@@ -26,7 +27,7 @@
             <button class="cta-btn inline-block">Get Started</button>
         </div>
     </nav>
-    <main>
+    <main class="  mx-auto w-11/12">
         <section class="hero-container">
             <div class="hero flex justify-between pt-5">
                 <div class="hero-left w-1/2">
@@ -42,7 +43,7 @@
                         within one plan.
                     </p>
                     <div class="email-form pt-5">
-                        <form onsubmit="">
+                        <form>
                             <input type="email" placeholder="email">
                             <button class="cta-btn"> Submit </button>
                         </form>
@@ -301,60 +302,67 @@
                 </div>
                 <div class="testimonial-slides">
                     <div class="testimonial-card z-10">
-                        <div class="icon-container">
-                            <img src="/images/testimonials/person2.svg" alt="testimonial person picture">
-                        </div>
-                        <div class="name-rating">
-                            <div class="ratings">
-                                <img src="/images/testimonials/ratings2.svg" alt="star ratings" />
+                        <div class="container">
+                            <div class="icon-container">
+                                <img src="/images/testimonials/person2.svg" alt="testimonial person picture">
                             </div>
-                            <div class="name">
-                                <h2>Elizabeth Holmes</h2>
+                            <div class="name-rating">
+                                <div class="ratings">
+                                    <img src="/images/testimonials/ratings2.svg" alt="star ratings" />
+                                </div>
+                                <div class="name">
+                                    <h2>Elizabeth Holmes</h2>
+                                </div>
                             </div>
-                        </div>
-                        <div class="testimony">
-                            <p>
-                                I loved everything about this camp. the instructors were encouraging and positive and it
-                                really had an impact on my experience here.
-                            </p>
+                            <div class="testimony">
+                                <p>
+                                    I loved everything about this camp. the instructors were encouraging and positive
+                                    and it
+                                    really had an impact on my experience here.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <div class="icon-container">
-                            <img src="/images/testimonials/person1.svg" alt="testimonial person picture">
-                        </div>
-                        <div class="name-rating">
-                            <div class="ratings">
-                                <img src="/images/testimonials/ratings.svg" alt="star ratings" />
+                        <div class="container">
+                            <div class="icon-container">
+                                <img src="/images/testimonials/person1.svg" alt="testimonial person picture">
                             </div>
-                            <div class="name">
-                                <h2>Solomon Ojonugwa</h2>
+                            <div class="name-rating">
+                                <div class="ratings">
+                                    <img src="/images/testimonials/ratings.svg" alt="star ratings" />
+                                </div>
+                                <div class="name">
+                                    <h2>Solomon Ojonugwa</h2>
+                                </div>
                             </div>
-                        </div>
-                        <div class="testimony">
-                            <p>
-                                It was very good, learned a lot of new things to take back with me. Although it is a
-                                basketball camp, they teach you things that apply to all aspects of life.
-                            </p>
+                            <div class="testimony">
+                                <p>
+                                    It was very good, learned a lot of new things to take back with me. Although it is a
+                                    basketball camp, they teach you things that apply to all aspects of life.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <div class="icon-container">
-                            <img src="/images/testimonials/person3.svg" alt="testimonial person picture">
-                        </div>
-                        <div class="name-rating">
-                            <div class="ratings">
-                                <img src="/images/testimonials/ratings2.svg" alt="star ratings" />
+                        <div class="container">
+                            <div class="icon-container">
+                                <img src="/images/testimonials/person3.svg" alt="testimonial person picture">
                             </div>
-                            <div class="name">
-                                <h2>Chris Paul</h2>
+                            <div class="name-rating">
+                                <div class="ratings">
+                                    <img src="/images/testimonials/ratings2.svg" alt="star ratings" />
+                                </div>
+                                <div class="name">
+                                    <h2>Chris Paul</h2>
+                                </div>
                             </div>
-                        </div>
-                        <div class="testimony">
-                            <p>
-                                Very caring and professional coaching that we received from the director and other
-                                supporting instructors. Impressive
-                            </p>
+                            <div class="testimony">
+                                <p>
+                                    Very caring and professional coaching that we received from the director and other
+                                    supporting instructors. Impressive
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -391,9 +399,78 @@
                 </div>
             </div>
         </section>
-        <footer class="footer"></footer>
-    </main>
 
+    </main>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-header">
+                <div class="header">
+                    <div class="icon"> <img src="/images/Logo.svg" alt="logo">
+                    </div>
+                    <h1>The Nugwa Camp</h1>
+                </div>
+                <p>Sign up for our weekly “3-POINT PLAY” email and get the latest updates and promotions from Nugwa.</p>
+                <ul class="social-links">
+                    <li> <a href="#"><i class="fa fa-twitter"></i></a> </li>
+                    <li> <a href="#"><i class="fa fa-linkedin"></i> </a> </li>
+                    <li> <a href="#"><i class="fa fa-facebook"></i> </a> </li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li class="top-link"> <a href="#"> About Us</a></li>
+                    <li> <a href="#"> Our Mission </a> </li>
+                    <li> <a href="#"> Our Team </a> </li>
+                    <li> <a href="#"> Join Our Staff </a> </li>
+                    <li> <a href="#"> Our Partners </a> </li>
+                    <li> <a href="#"> Blog </a> </li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li class="top-link"> <a href="#"> Get Help</a></li>
+                    <li> <a href="#"> Support Center </a> </li>
+                    <li> <a href="#"> 14hr Service </a> </li>
+                    <li> <a href="#"> Quick Chat </a> </li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li class="top-link"> <a href="#"> Support</a></li>
+                    <li> <a href="#"> Contact Us </a> </li>
+                    <li> <a href="#"> Policy </a> </li>
+                    <li> <a href="#"> Assistance </a> </li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li class="top-link"> <a href="#"> Contact</a></li>
+                    <li> <a href="#"> Whatsapp </a> </li>
+                    <li> <a href="#"> Twitter </a> </li>
+                    <li> <a href="#"> LinkedIn </a> </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <ul class="bottom-footer-links">
+                <li> <a href="#">Security</a> </li>
+                <li class="seperator"> </li>
+                <li> <a href="#">Privacy Policy</a> </li>
+                <li class="seperator"> </li>
+                <li> <a href="#">Terms</a> </li>
+                <li> &COPY; 2022
+                </li>
+            </ul>
+            <div class="credits">
+                <div class="designer"> Designed by <a href="https://twitter.com/Nugwa__?s=20&t=bzZuUiSklhcOMRPGTncwng"
+                        target="_blank">
+                        Solo</a></div>
+                <div class="dev"> Developed by <a href="https://chubiyojo.com" target="_blank"> Chubi</a></div>
+            </div>
+        </div>
+
+    </footer>
     <script src="script.js"></script>
 </body>
 

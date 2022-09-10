@@ -24,12 +24,6 @@ nav div.logo {
   animation-duration: 2s;
 }
 
-nav div.logo {
-  position: relative;
-  animation-name: jump;
-  animation-duration: 2s;
-}
-
 .caption {
   font-size: 12px;
 }
@@ -51,11 +45,14 @@ nav div.logo {
   /* height: 30px; */
   background: var(--gradient-2);
   border-radius: 10px;
-  padding: 10px 10px;
+  padding: 16px;
   font-size: 12px;
   /* gap: 25.26px; */
 }
 
+div.hero div.hero-left p img {
+  animation: rotate 2s linear infinite;
+}
 div.hero div.hero-right {
   height: 100%;
   overflow: hidden;
@@ -108,17 +105,6 @@ div.hero div.hero-right img:hover {
   text-align: center;
 }
 
-div.email-form input[type=email] {
-  width: 300px;
-  height: 40px;
-  padding: 10px;
-  border: 1px solid white;
-  background: black;
-  border-radius: 12.07px;
-  font-size: 12px;
-  outline: none;
-}
-
 div.hero-right img {
   max-height: 450px;
   /* margin: 0px; */
@@ -146,7 +132,7 @@ div.icon-container img {
 div.email-form input[type=email] {
   width: 300px;
   height: 40px;
-  padding: 10px;
+  padding: 25px;
   border: 1px solid white;
   background: black;
   border-radius: 12.07px;
@@ -399,17 +385,24 @@ section.testimonials div.testimonial-slides {
   overflow: hidden;
 }
 section.testimonials div.testimonial-slides div.testimonial-card {
-  background: var(--gradient-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
+  width: 100%;
+  height: 300px;
+  color: #d7d7d7;
+  transition: transform 0.5s ease;
+}
+section.testimonials div.testimonial-slides div.testimonial-card div.container {
+  width: 90%;
+  height: 100%;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 300px;
-  border-radius: 20px;
-  color: #d7d7d7;
-  transition: transform 0.5s ease;
+  background: var(--gradient-2);
 }
 section.testimonials div.testimonial-slides div.testimonial-card div.icon-container {
   margin-bottom: 30px;
@@ -478,28 +471,6 @@ section.testimonials div.slider-buttons .prev {
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-@keyframes jump {
-  0% {
-    bottom: 50px;
-  }
-  50% {
-    bottom: 0px;
-  }
-  75% {
-    bottom: 50px;
-  }
-  100% {
-    bottom: 0px;
-  }
-}
-@keyframes active-testimonial {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: none;
-  }
-}
 section.cta {
   @apply px-32;
 }
@@ -511,6 +482,7 @@ section.cta div.cta-container {
   height: 200px;
   border-radius: 20px;
   padding: 0px 70px;
+  margin: 80px 0px;
 }
 section.cta div.cta-container div.text h1 {
   font-size: 28px;
@@ -544,6 +516,116 @@ section.cta div.cta-container div.contact-form form button {
   position: relative;
   right: 4px;
   border-radius: 0px 10px 10px 0px;
+}
+
+footer.footer {
+  background: #090a12;
+  height: 300px;
+  padding: 0px 80px;
+}
+footer.footer div.footer-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 30px 0px;
+}
+footer.footer div.footer-top .footer-header .header {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+footer.footer div.footer-top .footer-header img {
+  width: 50px;
+}
+footer.footer div.footer-top .footer-header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+}
+footer.footer div.footer-top .footer-header p {
+  margin: 30px 0px;
+  max-width: 250px;
+}
+footer.footer div.footer-top .footer-header .social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+}
+footer.footer div.footer-top .footer-header .social-links li {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+}
+footer.footer div.footer-top .footer-header .social-links li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.footer div.footer-top .footer-header .social-links li:hover {
+  color: #000;
+  background-color: whitesmoke;
+}
+footer.footer div.footer-top .footer-links li {
+  margin: 17px;
+}
+footer.footer div.footer-top .top-link {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+footer.footer .footer-bottom {
+  padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+footer.footer .footer-bottom ul {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+footer.footer .footer-bottom ul .seperator {
+  width: 2px;
+  height: 20px;
+  background-color: white;
+}
+footer.footer .footer-bottom .credits {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  width: 500px;
+}
+footer.footer .footer-bottom .credits a {
+  color: #24c6dc;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 50px;
+  }
+  25% {
+    bottom: -20px;
+  }
+  50% {
+    bottom: 50px;
+  }
+  75% {
+    bottom: -20px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
