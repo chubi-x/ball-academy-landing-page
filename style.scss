@@ -33,6 +33,54 @@ nav {
     animation-name: jump;
     animation-duration: 2s;
   }
+  div.nav-links {
+    a {
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      span {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      &::before,
+      &::after {
+        width: 100%;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        transition: transform 0.3s ease;
+      }
+
+      &::before {
+        transform-origin: 10%, 50%;
+        transform: scale(0);
+        background: var(--gradient-2);
+        height: 1px;
+      }
+
+      &::after {
+        content: attr(data-replace);
+        top: 0;
+        height: 100%;
+        transform: translate(0, 100%);
+        @include text-bg();
+      }
+      &:hover {
+        &::after {
+          transform: translate(0, 0);
+        }
+        &::before {
+          transform: scale(2);
+        }
+
+        & span {
+          transform: translate3d(0, 250%, 0);
+        }
+      }
+    }
+  }
 }
 .caption {
   font-size: 12px;

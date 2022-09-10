@@ -23,6 +23,49 @@ nav div.logo {
   animation-name: jump;
   animation-duration: 2s;
 }
+nav div.nav-links a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+nav div.nav-links a span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+nav div.nav-links a::before, nav div.nav-links a::after {
+  width: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  transition: transform 0.3s ease;
+}
+nav div.nav-links a::before {
+  transform-origin: 10%, 50%;
+  transform: scale(0);
+  background: var(--gradient-2);
+  height: 1px;
+}
+nav div.nav-links a::after {
+  content: attr(data-replace);
+  top: 0;
+  height: 100%;
+  transform: translate(0, 100%);
+  background: var(--gradient-2);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+nav div.nav-links a:hover::after {
+  transform: translate(0, 0);
+}
+nav div.nav-links a:hover::before {
+  transform: scale(2);
+}
+nav div.nav-links a:hover span {
+  transform: translate3d(0, 250%, 0);
+}
 
 .caption {
   font-size: 12px;
