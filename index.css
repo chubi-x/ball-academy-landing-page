@@ -620,11 +620,17 @@ footer.footer .footer-bottom .credits a {
   }
 }
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
+  0% {
+    transform: rotate(0deg) translateX(-50%);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(90deg) translateX(0%);
+  }
+  50% {
+    transform: rotate(180deg) translateX(50%);
+  }
+  100% {
+    transform: rotate(360deg) translateX(-50%);
   }
 }
 
