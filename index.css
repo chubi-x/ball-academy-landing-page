@@ -50,7 +50,7 @@ nav div.nav-links a::after {
   content: attr(data-replace);
   top: 0;
   height: 100%;
-  transform: translate(0, 100%);
+  transform: translate(100%, -100%);
   background: var(--gradient-2);
   background-clip: text;
   text-fill-color: transparent;
@@ -88,9 +88,13 @@ nav div.nav-links a:hover span {
   /* height: 30px; */
   background: var(--gradient-2);
   border-radius: 10px;
-  padding: 16px;
+  padding: 12px;
   font-size: 12px;
-  /* gap: 25.26px; */
+  box-shadow: 0px 2px 2px 2px rgba(47, 150, 198, 0.667);
+  transition: transform 0.5s;
+}
+.cta-btn:active {
+  transform: scale(0.89);
 }
 
 div.hero div.hero-left p img {
@@ -175,7 +179,7 @@ div.icon-container img {
 div.email-form input[type=email] {
   width: 300px;
   height: 40px;
-  padding: 25px;
+  padding: 20px;
   border: 1px solid white;
   background: black;
   border-radius: 12.07px;
@@ -207,6 +211,22 @@ div.icon-container img {
   width: 50px;
 }
 
+section.services .heading {
+  height: 150px;
+}
+section.services .heading .text {
+  width: 90%;
+  padding-left: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section.services .heading .lottie {
+  display: absolute;
+  left: 200px;
+}
+
 section.services .services-details .service-header-container h1 {
   font-size: 25px;
   font-weight: bold;
@@ -233,6 +253,12 @@ section.services .services-details a img {
   @apply ml-2;
   display: inline;
   width: 15px;
+}
+section.services .services-details .service-link-container a img {
+  transition: transform 0.3s;
+}
+section.services .services-details .service-link-container a:hover img {
+  transform: translateX(10%) rotate(-30deg);
 }
 
 section.pricing {
@@ -409,6 +435,7 @@ section.testimonials div.testimonials-container {
 }
 section.testimonials div.testimonials-container div.header {
   margin: 50px;
+  margin-top: 30px;
   text-align: center;
 }
 section.testimonials div.testimonials-container div.header h1 {
@@ -525,7 +552,7 @@ section.cta div.cta-container {
   height: 200px;
   border-radius: 20px;
   padding: 0px 70px;
-  margin: 80px 0px;
+  margin: 40px 0px 80px 0px;
 }
 section.cta div.cta-container div.text h1 {
   font-size: 28px;
@@ -577,7 +604,11 @@ footer.footer div.footer-top .footer-header .header {
   align-items: center;
   padding-top: 15px;
 }
-footer.footer div.footer-top .footer-header img {
+footer.footer div.footer-top .footer-header div.icon {
+  position: relative;
+  animation: little-jump 10s linear infinite;
+}
+footer.footer div.footer-top .footer-header div.icon img {
   width: 50px;
 }
 footer.footer div.footer-top .footer-header h1 {
@@ -610,6 +641,42 @@ footer.footer div.footer-top .footer-header .social-links li a {
 footer.footer div.footer-top .footer-header .social-links li:hover {
   color: #000;
   background-color: whitesmoke;
+}
+footer.footer div.footer-top .footer-links a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+footer.footer div.footer-top .footer-links a::before, footer.footer div.footer-top .footer-links a::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+footer.footer div.footer-top .footer-links a::before {
+  height: 2px;
+  background: var(--gradient-2);
+  transform: scale(0);
+  transition: transform 0.4s;
+}
+footer.footer div.footer-top .footer-links a::after {
+  content: attr(data-replace);
+  transform: translate(200%, -200%);
+  transition: transform 0.4s;
+}
+footer.footer div.footer-top .footer-links a span {
+  display: block;
+  transition: transform 0.4s;
+}
+footer.footer div.footer-top .footer-links a:hover::before {
+  transform: scale(1);
+}
+footer.footer div.footer-top .footer-links a:hover::after {
+  transform: translate(0, 0);
+}
+footer.footer div.footer-top .footer-links a:hover span {
+  transform: translate(200%, 0);
 }
 footer.footer div.footer-top .footer-links li {
   margin: 17px;
@@ -660,6 +727,23 @@ footer.footer .footer-bottom .credits a {
   }
   100% {
     bottom: 0px;
+  }
+}
+@keyframes little-jump {
+  0% {
+    bottom: 5px;
+  }
+  25% {
+    bottom: -5px;
+  }
+  50% {
+    bottom: 5px;
+  }
+  75% {
+    bottom: -5px;
+  }
+  100% {
+    bottom: 5px;
   }
 }
 @keyframes rotate {

@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/397b00c9d6.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script> -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -102,14 +104,20 @@
             </div>
         </section>
         <section class="services py-24 px-20 flex flex-col items-center">
-            <div class="how-we-help w-full flex flex-col justify-center">
-                <div class="heading mx-auto w-1/2 flex flex-col justify-center">
-                    <h1 class="text-center text-4xl font-bold max-w-lg">How can we help your game?</h1>
-                    <p class="pt-5 text-xs text-center max-w-lg">When you learn with us, you learn everything you need
+            <div class="how-we-help w-full flex flex-col justify-center items-center">
+                <div class="heading mx-auto w-11/12 flex justify-center">
+                    <div class="text">
+                        <h1 class="text-center text-4xl font-bold max-w-lg">How can we help your game?</h1>
+                        <p class="pt-5 text-xs text-center max-w-lg">When you learn with us, you learn everything you
+                            need
+                            to know
+                        </p>
+                    </div>
+                    <lottie-player class="lottie" src="/images/motion/ball.json" background="transparent" speed="1"
+                        style="width: 250px; height: 100px;" loop autoplay></lottie-player>
 
-                        to know
-                    </p>
                 </div>
+
                 <div class="cards pt-10 flex justify-center space-x-6  cursor-pointer">
                     <div class="card">
                         <div class="icon-container">
@@ -418,36 +426,36 @@
             </div>
             <div class="footer-links">
                 <ul>
-                    <li class="top-link"> <a href="#"> About Us</a></li>
-                    <li> <a href="#"> Our Mission </a> </li>
-                    <li> <a href="#"> Our Team </a> </li>
-                    <li> <a href="#"> Join Our Staff </a> </li>
-                    <li> <a href="#"> Our Partners </a> </li>
-                    <li> <a href="#"> Blog </a> </li>
+                    <li class="top-link">About Us</li>
+                    <li> <a href="#" data-replace="Our Mission"> <span> Our Mission</span> </a> </li>
+                    <li> <a href="#" data-replace="Our Team"> <span> Our Team</span> </a> </li>
+                    <li> <a href="#" data-replace="Join Our Staf"> <span> Join Our Staff</span> </a> </li>
+                    <li> <a href="#" data-replace="Our Partners"> <span> Our Partners</span> </a> </li>
+                    <li> <a href="#" data-replace="Blog"> <span> Blog</span> </a> </li>
                 </ul>
             </div>
             <div class="footer-links">
                 <ul>
-                    <li class="top-link"> <a href="#"> Get Help</a></li>
-                    <li> <a href="#"> Support Center </a> </li>
-                    <li> <a href="#"> 14hr Service </a> </li>
-                    <li> <a href="#"> Quick Chat </a> </li>
+                    <li class="top-link">Get Help</li>
+                    <li> <a href="#" data-replace="Support Center"> <span> Support Center</span> </a> </li>
+                    <li> <a href="#" data-replace="24hr Service"> <span> 24hr Service</span> </a> </li>
+                    <li> <a href="#" data-replace="Quick Chat"> <span> Quick Chat</span> </a> </li>
                 </ul>
             </div>
             <div class="footer-links">
                 <ul>
-                    <li class="top-link"> <a href="#"> Support</a></li>
-                    <li> <a href="#"> Contact Us </a> </li>
-                    <li> <a href="#"> Policy </a> </li>
-                    <li> <a href="#"> Assistance </a> </li>
+                    <li class="top-link"> Support</li>
+                    <li> <a href="#" data-replace="Contact Us"> <span> Contact Us</span> </a> </li>
+                    <li> <a href="#" data-replace="Policy"> <span> Policy</span> </a> </li>
+                    <li> <a href="#" data-replace=" Assistance"> <span> Assistance</span> </a> </li>
                 </ul>
             </div>
             <div class="footer-links">
                 <ul>
-                    <li class="top-link"> <a href="#"> Contact</a></li>
-                    <li> <a href="#"> Whatsapp </a> </li>
-                    <li> <a href="#"> Twitter </a> </li>
-                    <li> <a href="#"> LinkedIn </a> </li>
+                    <li class="top-link">Contact Us</li>
+                    <li> <a href="#" data-replace="Whatsapp"> <span> Whatsapp</span> </a> </li>
+                    <li> <a href="#" data-replace="Twitter"> <span> Twitter</span> </a> </li>
+                    <li> <a href="#" data-replace="LinkedIn"> <span> LinkedIn</span> </a> </li>
                 </ul>
             </div>
         </div>

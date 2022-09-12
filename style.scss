@@ -64,7 +64,7 @@ nav {
         content: attr(data-replace);
         top: 0;
         height: 100%;
-        transform: translate(0, 100%);
+        transform: translate(100%, -100%);
         @include text-bg();
       }
       &:hover {
@@ -99,10 +99,15 @@ nav {
   /* height: 30px; */
   background: var(--gradient-2);
   border-radius: 10px;
-  padding: 16px;
+  padding: 12px;
   font-size: 12px;
-  /* gap: 25.26px; */
+  box-shadow: 0px 2px 2px 2px rgba(47, 150, 198, 0.667);
+  transition: transform 0.5s;
+  &:active {
+    transform: scale(0.89);
+  }
 }
+
 div.hero {
   div.hero-left p img {
     animation: rotate 2s linear infinite;
@@ -188,7 +193,7 @@ div.icon-container img {
 div.email-form input[type="email"] {
   width: 300px;
   height: 40px;
-  padding: 25px;
+  padding: 20px;
   border: 1px solid white;
   background: black;
   border-radius: 12.07px;
@@ -220,7 +225,24 @@ section.pricing {
 div.icon-container img {
   width: 50px;
 }
+section.services {
+  .heading {
+    height: 150px;
 
+    .text {
+      width: 90%;
+      padding-left: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .lottie {
+      display: absolute;
+      left: 200px;
+    }
+  }
+}
 section.services .services-details {
   .service-header-container h1 {
     font-size: 25px;
@@ -243,6 +265,17 @@ section.services .services-details {
       @apply ml-2;
       display: inline;
       width: 15px;
+    }
+  }
+
+  .service-link-container {
+    a {
+      img {
+        transition: transform 0.3s;
+      }
+      &:hover img {
+        transform: translateX(10%) rotate(-30deg);
+      }
     }
   }
 }
@@ -439,6 +472,7 @@ section.testimonials {
     position: relative;
     div.header {
       margin: 50px;
+      margin-top: 30px;
       text-align: center;
       h1 {
         font-size: 2.5rem;
@@ -563,7 +597,7 @@ section.cta {
     height: 200px;
     border-radius: 20px;
     padding: 0px 70px;
-    margin: 80px 0px;
+    margin: 40px 0px 80px 0px;
 
     div.text {
       h1 {
@@ -622,9 +656,14 @@ footer.footer {
         align-items: center;
         padding-top: 15px;
       }
-      img {
-        width: 50px;
+      div.icon {
+        position: relative;
+        animation: little-jump 10s linear infinite;
+        img {
+          width: 50px;
+        }
       }
+
       h1 {
         font-size: 20px;
         font-weight: bold;
@@ -661,6 +700,49 @@ footer.footer {
     }
 
     .footer-links {
+      a {
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+
+        &::before,
+        &::after {
+          content: "";
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+
+        &::before {
+          height: 2px;
+          background: var(--gradient-2);
+          transform: scale(0);
+          transition: transform 0.4s;
+        }
+
+        &::after {
+          content: attr(data-replace);
+          transform: translate(200%, -200%);
+          transition: transform 0.4s;
+        }
+        span {
+          display: block;
+          transition: transform 0.4s;
+        }
+
+        &:hover {
+          &::before {
+            transform: scale(1);
+          }
+          &::after {
+            transform: translate(0, 0);
+          }
+          span {
+            transform: translate(200%, 0);
+          }
+        }
+      }
       li {
         margin: 17px;
       }
@@ -717,6 +799,23 @@ footer.footer {
   }
   100% {
     bottom: 0px;
+  }
+}
+@keyframes little-jump {
+  0% {
+    bottom: 5px;
+  }
+  25% {
+    bottom: -5px;
+  }
+  50% {
+    bottom: 5px;
+  }
+  75% {
+    bottom: -5px;
+  }
+  100% {
+    bottom: 5px;
   }
 }
 
