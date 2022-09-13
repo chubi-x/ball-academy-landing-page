@@ -18,10 +18,61 @@ body {
   --gradient-2: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
 }
 
+div.loading-state {
+  width: 30%;
+  height: 50%;
+  margin: auto;
+  margin-top: 10%;
+}
+
+nav {
+  display: flex;
+}
 nav div.logo {
   position: relative;
   animation-name: jump;
   animation-duration: 2s;
+}
+nav button.hamburger-menu .top,
+nav button.hamburger-menu .middle,
+nav button.hamburger-menu .bottom {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px;
+  background-color: #24c6dc;
+  transition: all 0.5s;
+}
+nav button.hamburger-menu.open .top {
+  rotate: 40deg;
+  transform: translateX(5px);
+}
+nav button.hamburger-menu.open .middle {
+  display: none;
+}
+nav button.hamburger-menu.open .bottom {
+  rotate: -45deg;
+  transform: translateX(5px);
+}
+nav div.mobile-menu {
+  display: grid;
+  place-content: center;
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  background-color: black;
+  box-shadow: inset 0px 1px 9px 0px #24c6dc;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+nav div.mobile-menu .nav-links a {
+  margin: 10px;
+}
+nav div.mobile-menu.menu-hidden {
+  opacity: 0;
+  height: 0;
 }
 nav div.nav-links a {
   overflow: hidden;
@@ -125,6 +176,7 @@ div.hero div.hero-right img:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .card:before {
   content: "";
@@ -222,11 +274,10 @@ section.services .heading .text {
   align-items: center;
   justify-content: center;
 }
-section.services .heading .lottie {
-  display: absolute;
-  left: 200px;
-}
 
+section.services .services-details {
+  position: relative;
+}
 section.services .services-details .service-header-container h1 {
   font-size: 25px;
   font-weight: bold;
@@ -259,6 +310,21 @@ section.services .services-details .service-link-container a img {
 }
 section.services .services-details .service-link-container a:hover img {
   transform: translateX(10%) rotate(-30deg);
+}
+section.services .services-details div.stars {
+  position: absolute;
+  top: 0;
+  bottom: 100px;
+  left: 0;
+  right: 20%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+section.services .services-details div.stars img {
+  position: absolute;
+  width: 10px;
+  animation: scale-up 2s linear infinite;
 }
 
 section.pricing {
@@ -446,6 +512,14 @@ section.testimonials div.testimonials-container div.header p {
   font-size: 12px;
   margin: 10px 0px;
 }
+section.testimonials div.testimonials-container lottie-player {
+  width: 100px !important;
+  height: 100px;
+  margin-left: auto;
+  position: absolute;
+  bottom: 82%;
+  left: 69%;
+}
 section.testimonials div.testimonial-slides {
   display: flex;
   justify-content: center;
@@ -606,7 +680,7 @@ footer.footer div.footer-top .footer-header .header {
 }
 footer.footer div.footer-top .footer-header div.icon {
   position: relative;
-  animation: little-jump 10s linear infinite;
+  animation: little-jump 3s linear infinite;
 }
 footer.footer div.footer-top .footer-header div.icon img {
   width: 50px;
@@ -758,6 +832,17 @@ footer.footer .footer-bottom .credits a {
   }
   100% {
     transform: rotate(360deg) translateX(-50%);
+  }
+}
+@keyframes scale-up {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 

@@ -11,27 +11,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/397b00c9d6.js" crossorigin="anonymous"></script>
-    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script> -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-black">
-    <nav class="flex justify-between items-center pt-8 mx-auto w-11/12">
+    <div class="loading-state">
+        <lottie-player src="/images/motion/loading.json" background="transparent" speed="1"
+            style="width: 10px; height: 10px;" loop autoplay></lottie-player>
+    </div>
+    <nav class="justify-between items-center pt-8 mx-auto w-11/12">
         <div class="logo">
             <img src="/images/Logo.svg" alt="logo" style="width:75px;">
         </div>
-        <div class="nav-links flex items-center space-x-8 text-white text-sm">
+        <div class="nav-links hidden items-center space-x-8 text-white text-sm md:flex">
             <a href="#" class="nav-link" data-replace="About Us"> <span>About Us</span></a>
             <a href="#" class="nav-link" data-replace="Our Services"> <span>Our Services</span> </a>
             <a href="#" class="nav-link" data-replace="Pricing"> <span>Pricing</span> </a>
             <a href="#" class="nav-link" data-replace="Testimonials"> <span>Testimonials</span></a>
             <button class="cta-btn inline-block">Get Started</button>
         </div>
+        <button class="hamburger-menu md:hidden">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </button>
+        <div class="mobile-menu menu-hidden md:hidden">
+            <div class="nav-links flex flex-col items-center justify-center text-white text-sm">
+                <a href="#" class="nav-link" data-replace="About Us"> <span>About Us</span></a>
+                <a href="#" class="nav-link" data-replace="Our Services"> <span>Our Services</span> </a>
+                <a href="#" class="nav-link" data-replace="Pricing"> <span>Pricing</span> </a>
+                <a href="#" class="nav-link" data-replace="Testimonials"> <span>Testimonials</span></a>
+            </div>
+        </div>
     </nav>
-    <main class="  mx-auto w-11/12">
+    <main class="mx-auto w-11/12">
         <section class="hero-container">
-            <div class="hero flex justify-between pt-5">
+            <div class="hero flex flex-col justify-between pt-5 md:flex-row">
                 <div class="hero-left w-1/2">
                     <p class="caption caption-span"> <img src="/images/asterisk.svg" alt="asterisk icon"> Jump start
                         your
@@ -113,7 +129,7 @@
                             to know
                         </p>
                     </div>
-                    <lottie-player class="lottie" src="/images/motion/ball.json" background="transparent" speed="1"
+                    <lottie-player src="/images/motion/ball.json" background="transparent" speed="1"
                         style="width: 250px; height: 100px;" loop autoplay></lottie-player>
 
                 </div>
@@ -205,6 +221,8 @@
                     </div>
 
                 </div>
+                <div class="stars">
+                </div>
             </div>
         </section>
         <section class="pricing flex justify-center items-center">
@@ -243,6 +261,9 @@
         </section>
         <section class="perks flex justify-between p-24 py-28">
             <div class="text-container flex flex-col self-center">
+                <lottie-player src="/images/motion/hand.json" background="transparent" speed="1"
+                    style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+
                 <h1 class="text-4xl text-white font-bold pb-6">Change your game with the new style</h1>
                 <p class="text-xs max-w-xs">
                     Improve your overall fundamentals, skill mastery, teamwork, discipline and overall basketball IQ
@@ -308,6 +329,9 @@
                     <h1>What our Players say</h1>
                     <p>Things that make us the best place to learn basketball</p>
                 </div>
+                <lottie-player src="/images/motion/quote.json" background="transparent" speed="1"
+                    style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+
                 <div class="testimonial-slides">
                     <div class="testimonial-card z-10">
                         <div class="container">

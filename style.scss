@@ -26,13 +26,71 @@ body {
   );
   --gradient-2: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
 }
+div.loading-state {
+  width: 30%;
+  height: 50%;
+  margin: auto;
+  margin-top: 10%;
+}
 
 nav {
+  display: flex;
   div.logo {
     position: relative;
     animation-name: jump;
     animation-duration: 2s;
   }
+  button.hamburger-menu {
+    // height: 30px;
+    // width: 50px;
+    // background-color: white;
+    .top,
+    .middle,
+    .bottom {
+      display: block;
+      width: 25px;
+      height: 2px;
+      margin: 5px;
+      background-color: #24c6dc;
+      transition: all 0.5s;
+    }
+
+    &.open .top {
+      rotate: 40deg;
+      transform: translateX(5px);
+    }
+    &.open .middle {
+      display: none;
+    }
+    &.open .bottom {
+      rotate: -45deg;
+      transform: translateX(5px);
+    }
+  }
+
+  div.mobile-menu {
+    display: grid;
+    place-content: center;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    background-color: black;
+    box-shadow: inset 0px 1px 9px 0px #24c6dc;
+    border-radius: 10px;
+    transition: all 0.5s;
+
+    .nav-links a {
+      margin: 10px;
+    }
+
+    &.menu-hidden {
+      opacity: 0;
+      height: 0;
+    }
+  }
+
   div.nav-links {
     a {
       overflow: hidden;
@@ -138,6 +196,7 @@ div.hero {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   &:before {
     content: "";
@@ -237,13 +296,10 @@ section.services {
       align-items: center;
       justify-content: center;
     }
-    .lottie {
-      display: absolute;
-      left: 200px;
-    }
   }
 }
 section.services .services-details {
+  position: relative;
   .service-header-container h1 {
     font-size: 25px;
     font-weight: bold;
@@ -276,6 +332,21 @@ section.services .services-details {
       &:hover img {
         transform: translateX(10%) rotate(-30deg);
       }
+    }
+  }
+  div.stars {
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    left: 0;
+    right: 20%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    img {
+      position: absolute;
+      width: 10px;
+      animation: scale-up 2s linear infinite;
     }
   }
 }
@@ -483,6 +554,16 @@ section.testimonials {
         margin: 10px 0px;
       }
     }
+
+    lottie-player {
+      width: 100px !important;
+      height: 100px;
+      margin-left: auto;
+      position: absolute;
+      bottom: 82%;
+      left: 69%;
+      // display: none;
+    }
   }
 
   div.testimonial-slides {
@@ -658,7 +739,7 @@ footer.footer {
       }
       div.icon {
         position: relative;
-        animation: little-jump 10s linear infinite;
+        animation: little-jump 3s linear infinite;
         img {
           width: 50px;
         }
@@ -831,6 +912,18 @@ footer.footer {
   }
   100% {
     transform: rotate(360deg) translateX(-50%);
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 
