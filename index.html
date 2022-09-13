@@ -36,19 +36,21 @@
             <span class="middle"></span>
             <span class="bottom"></span>
         </button>
-        <div class="mobile-menu menu-hidden md:hidden">
-            <div class="nav-links flex flex-col items-center justify-center text-white text-sm">
-                <a href="#" class="nav-link" data-replace="About Us"> <span>About Us</span></a>
-                <a href="#" class="nav-link" data-replace="Our Services"> <span>Our Services</span> </a>
-                <a href="#" class="nav-link" data-replace="Pricing"> <span>Pricing</span> </a>
-                <a href="#" class="nav-link" data-replace="Testimonials"> <span>Testimonials</span></a>
+        <div class="mobile-menu-container">
+            <div class="mobile-menu menu-hidden md:hidden">
+                <div class="nav-links flex flex-col items-center justify-center text-white text-sm">
+                    <a href="#" class="nav-link" data-replace="About Us"> <span>About Us</span></a>
+                    <a href="#" class="nav-link" data-replace="Our Services"> <span>Our Services</span> </a>
+                    <a href="#" class="nav-link" data-replace="Pricing"> <span>Pricing</span> </a>
+                    <a href="#" class="nav-link" data-replace="Testimonials"> <span>Testimonials</span></a>
+                </div>
             </div>
         </div>
     </nav>
     <main class="mx-auto w-11/12">
         <section class="hero-container">
-            <div class="hero flex flex-col justify-between pt-5 md:flex-row">
-                <div class="hero-left w-1/2">
+            <div class="hero flex flex-col-reverse justify-between pt-5 md:flex-row">
+                <div class="hero-left w-full md:w-1/2">
                     <p class="caption caption-span"> <img src="/images/asterisk.svg" alt="asterisk icon"> Jump start
                         your
                         growth</p>
@@ -67,7 +69,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="hero-right">
+                <div class="hero-right md:w/12">
                     <img src="/images/hero-img.png" alt="hero image">
                 </div>
             </div>

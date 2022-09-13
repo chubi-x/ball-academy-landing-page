@@ -41,9 +41,6 @@ nav {
     animation-duration: 2s;
   }
   button.hamburger-menu {
-    // height: 30px;
-    // width: 50px;
-    // background-color: white;
     .top,
     .middle,
     .bottom {
@@ -67,27 +64,31 @@ nav {
       transform: translateX(5px);
     }
   }
-
-  div.mobile-menu {
-    display: grid;
-    place-content: center;
-    width: 300px;
-    height: 200px;
+  div.mobile-menu-container {
     position: absolute;
-    left: 20%;
     top: 20%;
-    background-color: black;
-    box-shadow: inset 0px 1px 9px 0px #24c6dc;
-    border-radius: 10px;
-    transition: all 0.5s;
+    left: 50%;
+    div.mobile-menu {
+      display: grid;
+      place-content: center;
+      width: 300px;
+      height: 200px;
+      position: relative;
+      left: -50%;
+      // top: 20%;
+      background-color: black;
+      box-shadow: inset 0px 1px 9px 0px #24c6dc;
+      border-radius: 10px;
+      transition: all 0.5s;
 
-    .nav-links a {
-      margin: 10px;
-    }
+      .nav-links a {
+        margin: 10px;
+      }
 
-    &.menu-hidden {
-      opacity: 0;
-      height: 0;
+      &.menu-hidden {
+        opacity: 0;
+        height: 0;
+      }
     }
   }
 
