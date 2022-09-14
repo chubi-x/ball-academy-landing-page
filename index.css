@@ -603,26 +603,19 @@ section.testimonials div.slider-buttons .prev {
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-section.cta {
-  @apply px-32;
-}
 section.cta div.cta-container {
   display: grid;
   align-items: center;
-  grid-auto-flow: column;
   background: var(--gradient-2);
   height: 200px;
   border-radius: 20px;
-  padding: 0px 70px;
   margin: 40px 0px 80px 0px;
 }
 section.cta div.cta-container div.text h1 {
-  font-size: 28px;
   font-weight: bold;
 }
 section.cta div.cta-container div.text p {
   font-size: 12px;
-  max-width: 250px;
   padding-top: 15px;
 }
 section.cta div.cta-container div.contact-form {
