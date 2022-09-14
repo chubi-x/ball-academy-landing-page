@@ -222,7 +222,7 @@ div.sponsors img {
 
 section.stats,
 section.pricing {
-  margin: 0px -4%;
+  margin: 0px -4.3%;
   padding: 40px;
   background: var(--gradient);
 }
@@ -262,7 +262,6 @@ section.services .heading {
 }
 section.services .heading .text {
   width: 90%;
-  padding-left: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;

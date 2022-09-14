@@ -126,22 +126,23 @@
                 </div>
             </div>
         </section>
-        <section class="services py-24 px-20 flex flex-col items-center">
+        <section class="services flex flex-col items-center md:py-24 md:px-20">
             <div class="how-we-help w-full flex flex-col justify-center items-center">
                 <div class="heading mx-auto w-11/12 flex justify-center">
-                    <div class="text">
-                        <h1 class="text-center text-4xl font-bold max-w-lg">How can we help your game?</h1>
-                        <p class="pt-5 text-xs text-center max-w-lg">When you learn with us, you learn everything you
+                    <div class="text md:pl-32">
+                        <h1 class="text-center text-2xl font-bold md:text-4xl md:max-w-lg">How can we help your game?
+                        </h1>
+                        <p class="pt-5 text-xs text-center md:max-w-lg">When you learn with us, you learn everything you
                             need
                             to know
                         </p>
                     </div>
-                    <lottie-player src="/images/motion/ball.json" background="transparent" speed="1"
-                        style="width: 250px; height: 100px;" loop autoplay></lottie-player>
+                    <lottie-player class="hidden md:block" src="/images/motion/ball.json" background="transparent"
+                        speed="1" style="width: 250px; height: 100px;" loop autoplay></lottie-player>
 
                 </div>
 
-                <div class="cards pt-10 flex justify-center space-x-6  cursor-pointer">
+                <div class="cards pt-10 space-y-6 flex flex-col justify-center cursor-pointer md:flex-row md:space-x-6">
                     <div class="card">
                         <div class="icon-container">
                             <img src="/images/services/scoring.svg" alt="services icon">
