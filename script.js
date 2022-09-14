@@ -131,4 +131,4 @@ setTimeout(() => {
     changeVal();
   });
   changeVal();
-}, 10);
+}, 4000);
