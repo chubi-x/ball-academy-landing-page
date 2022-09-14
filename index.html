@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://kit.fontawesome.com/397b00c9d6.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/397b00c9d6.js" crossorigin="anonymous"></script> -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -38,7 +38,7 @@
         </button>
         <div class="mobile-menu-container">
             <div class="mobile-menu menu-hidden md:hidden">
-                <div class="nav-links flex flex-col items-center justify-center text-white text-sm">
+                <div class="nav-links flex flex-col items-center justify-center text-white text-lg">
                     <a href="#" class="nav-link" data-replace="About Us"> <span>About Us</span></a>
                     <a href="#" class="nav-link" data-replace="Our Services"> <span>Our Services</span> </a>
                     <a href="#" class="nav-link" data-replace="Pricing"> <span>Pricing</span> </a>
@@ -47,7 +47,7 @@
             </div>
         </div>
     </nav>
-    <main class="mx-auto w-11/12">
+    <main class="mx-auto w-11/12 relative">
         <section class="hero-container">
             <div class="hero flex flex-col-reverse justify-between pt-5 md:flex-row">
                 <div class="hero-left w-full md:w-1/2">
@@ -64,58 +64,63 @@
                     </p>
                     <div class="email-form pt-5">
                         <form>
-                            <input type="email" placeholder="email">
+                            <input class="mb-6" type="email" placeholder="email">
                             <button class="cta-btn"> Submit </button>
                         </form>
                     </div>
                 </div>
-                <div class="hero-right md:w/12">
+                <div class="hero-right mb-8 md:w/12">
                     <img src="/images/hero-img.png" alt="hero image">
                 </div>
             </div>
-            <div class="sponsors py-20 flex justify-between items-center">
-                <div class="sponsor-item border-t pt-2">
+            <div class="sponsors py-20 flex flex-wrap justify-between items-center -m-4 md:m-0">
+                <div class="sponsor-item border-t pt-2 m-4">
                     <p class="text-xs">
                         Proud partner at Hubspot & Segment
                     </p>
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item m-4 md:m-0">
                     <img src="/images/sponsors-logos/spalding.svg" alt="sponsor logo">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item m-4 md:m-0">
                     <img src="/images/sponsors-logos/adidas.svg" alt="sponsor logo">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item m-4 md:m-0">
                     <img src="/images/sponsors-logos/nba-finals.svg" alt="sponsor logo">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item m-4 hidden md:block md:m-0">
                     <img src="/images/sponsors-logos/qbuzz.svg" alt="sponsor logo">
                 </div>
             </div>
         </section>
-        <section class="stats flex justify-between items-center px-20">
+        <section
+            class="stats flex flex-col justify-between space-y-12 md:px-20 md:space-y-0 md:flex-row md:items-center">
             <div class="achieve">
-                <h3 class="uppercase text-xs">Achieve More</h3>
-                <h1 class="text-2xl font-bold w-52">The purpose of playing is to keep you winning</h1>
+                <h3 class="uppercase text-xs text-center md:text-left">Achieve More</h3>
+                <h1 class="text-2xl text-center font-bold max-w-full md:w-52 md:text-left">The purpose of playing is to
+                    keep you winning</h1>
             </div>
-            <div class="numbers flex space-x-8">
+            <div class="numbers flex flex-col md:space-x-8 md:flex-row">
                 <div class="icon-container">
                     <img src="/images/numbers.svg" alt="members icon">
                 </div>
-                <div class="members-text">
+                <div class="members-text flex flex-col justify-center items-center md:block">
                     <h1 class="font-bold text-lg mb-2">By the Numbers</h1>
-                    <p class="w-48 text-xs">96% of players and parents surveyed say they'll strongly recommend us to
+                    <p class="w-4/6 text-xs text-center md:text-left md:w-48">96% of players and parents surveyed say
+                        they'll strongly recommend
+                        us to
                         others
                     </p>
                 </div>
             </div>
-            <div class="member-retention flex space-x-8">
+            <div class="member-retention flex flex-col md:space-x-8 md:flex-row">
                 <div class="icon-container">
                     <img src="/images/recycle.svg" alt="members icon">
                 </div>
-                <div class="members-text">
+                <div class="members-text flex flex-col justify-center items-center md:block">
                     <h1 class="font-bold text-lg mb-2">Member Retention</h1>
-                    <p class="w-48 text-xs">98% of coaches and players that has worked with us renewed their
+                    <p class="w-4/6 text-xs text-center md:text-left md:w-48">98% of coaches and players that has
+                        worked with us renewed their
                         subsciption
                     </p>
                 </div>

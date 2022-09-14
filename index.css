@@ -3,6 +3,7 @@
 @tailwind utilities;
 * {
   font-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -63,11 +64,11 @@ nav div.mobile-menu-container div.mobile-menu {
   display: grid;
   place-content: center;
   width: 300px;
-  height: 200px;
+  height: 250px;
   position: relative;
   left: -50%;
   background-color: black;
-  box-shadow: inset 0px 1px 9px 0px #24c6dc;
+  box-shadow: 0px 1px 9px 0px #24c6dc;
   border-radius: 10px;
   transition: all 0.5s;
 }
@@ -76,6 +77,7 @@ nav div.mobile-menu-container div.mobile-menu .nav-links a {
 }
 nav div.mobile-menu-container div.mobile-menu.menu-hidden {
   opacity: 0;
+  width: 0;
   height: 0;
 }
 nav div.nav-links a {
@@ -220,16 +222,14 @@ div.sponsors img {
 
 section.stats,
 section.pricing {
-  position: relative;
-  /* left: 0px; */
-  right: 6.5%;
+  margin: 0px -4%;
   padding: 40px;
-  width: 100vw;
   background: var(--gradient);
 }
 
 div.icon-container img {
   width: 50px;
+  margin: 0 auto;
 }
 
 div.email-form input[type=email] {
@@ -251,16 +251,6 @@ div.hero-right img {
 
 div.sponsors img {
   width: 100px;
-}
-
-section.stats,
-section.pricing {
-  position: relative;
-  /* left: 0px; */
-  right: 6.5%;
-  padding: 40px;
-  width: 100vw;
-  background: var(--gradient);
 }
 
 div.icon-container img {
