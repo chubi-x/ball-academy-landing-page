@@ -292,7 +292,7 @@ section.services {
 }
 section.services .services-details {
   position: relative;
-
+  overflow: hidden;
   .service-header-container h1 {
     font-size: 25px;
     font-weight: bold;
@@ -459,7 +459,6 @@ section.pricing {
   }
 }
 section.perks {
-  height: 700px;
   div.text-container {
     width: 40%;
   }
@@ -481,12 +480,10 @@ section.perks {
   }
 
   div.perks-cards {
-    width: 50%;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto auto;
     column-gap: 40px;
-    row-gap: 30px;
   }
   div.card {
     width: 100%;
@@ -494,6 +491,11 @@ section.perks {
     justify-content: flex-start;
     align-items: flex-start;
 
+    .text {
+      width: 100%;
+      height: 90%;
+      padding: 0px 0px 10px 0px;
+    }
     img {
       width: 40px;
     }
@@ -547,20 +549,17 @@ section.testimonials {
     }
 
     lottie-player {
-      width: 100px !important;
-      height: 100px;
+      width: 90px;
+      height: 90px;
       margin-left: auto;
       position: absolute;
-      bottom: 82%;
-      left: 69%;
-      // display: none;
+      bottom: 87%;
     }
   }
 
   div.testimonial-slides {
     display: flex;
     justify-content: center;
-    width: 50%;
     height: 300px;
     position: relative;
     overflow: hidden;

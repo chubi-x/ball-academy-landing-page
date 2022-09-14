@@ -270,6 +270,7 @@ section.services .heading .text {
 
 section.services .services-details {
   position: relative;
+  overflow: hidden;
 }
 section.services .services-details .service-header-container h1 {
   font-size: 25px;
@@ -331,7 +332,6 @@ section.pricing div.pricing-group div.pricing-cta {
   bottom: 35px;
 }
 section.pricing div.pricing-group div.pricing-cta {
-  position: relative;
   left: 150px;
   bottom: 35px;
 }
@@ -415,9 +415,6 @@ section.pricing div.pricing-slider input[type=range]::-moz-range-thumb {
   width: 20px;
 }
 
-section.perks {
-  height: 700px;
-}
 section.perks div.text-container {
   width: 40%;
 }
@@ -438,18 +435,21 @@ section.perks div.checklist {
   justify-content: center;
 }
 section.perks div.perks-cards {
-  width: 50%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: auto auto;
   column-gap: 40px;
-  row-gap: 30px;
 }
 section.perks div.card {
   width: 100%;
   height: 90%;
   justify-content: flex-start;
   align-items: flex-start;
+}
+section.perks div.card .text {
+  width: 100%;
+  height: 90%;
+  padding: 0px 0px 10px 0px;
 }
 section.perks div.card img {
   width: 40px;
@@ -503,17 +503,15 @@ section.testimonials div.testimonials-container div.header p {
   margin: 10px 0px;
 }
 section.testimonials div.testimonials-container lottie-player {
-  width: 100px !important;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   margin-left: auto;
   position: absolute;
-  bottom: 82%;
-  left: 69%;
+  bottom: 87%;
 }
 section.testimonials div.testimonial-slides {
   display: flex;
   justify-content: center;
-  width: 50%;
   height: 300px;
   position: relative;
   overflow: hidden;
