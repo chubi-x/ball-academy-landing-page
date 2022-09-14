@@ -17,7 +17,7 @@ setTimeout(() => {
   });
 
   document.querySelector("body").style.backgroundImage =
-    ' url("/images/blob.svg")';
+    ' url("images/blob.svg")';
 
 
 
@@ -38,7 +38,7 @@ setTimeout(() => {
   let i = 0;
   while (i < 100) {
     const el = document.createElement("img");
-    el.src = "/images/asterisk.svg";
+    el.src = "images/asterisk.svg";
     el.alt = "star";
     document.querySelector(".stars").appendChild(el);
     i++;
