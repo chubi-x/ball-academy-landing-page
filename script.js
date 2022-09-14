@@ -94,17 +94,18 @@ setTimeout(() => {
     moveSlide(cards, currSlide);
   });
 
-  nextBtn.addEventListener("click", () => {
+  function nextSlide() {
     if (currSlide === maxSlides) {
       currSlide = 0;
     } else currSlide++;
+  }
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
     moveSlide(cards, currSlide);
   });
 
   setInterval(() => {
-    if (currSlide === maxSlides) {
-      currSlide = 0;
-    } else currSlide++;
+    nextSlide();
     moveSlide(cards, currSlide);
   }, 3000)
 
@@ -130,4 +131,4 @@ setTimeout(() => {
     changeVal();
   });
   changeVal();
-}, 2500);
+}, 10);
