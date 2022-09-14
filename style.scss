@@ -28,7 +28,8 @@ body {
   --gradient-2: linear-gradient(180deg, #24c6dc 0%, #514a9d 100%);
 }
 div.loading-state {
-  width: 30%;
+  width: 100%;
+  @apply md:w-[30%];
   height: 50%;
   margin: auto;
   margin-top: 10%;

@@ -20,7 +20,8 @@ body {
 }
 
 div.loading-state {
-  width: 30%;
+  width: 100%;
+  @apply md:w-[30%];
   height: 50%;
   margin: auto;
   margin-top: 10%;
