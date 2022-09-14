@@ -157,7 +157,7 @@ nav {
 
 .cta-btn {
   width: 120px;
-  /* height: 30px; */
+  height: 100%;
   background: var(--gradient-2);
   border-radius: 10px;
   padding: 12px;
@@ -292,6 +292,7 @@ section.services {
 }
 section.services .services-details {
   position: relative;
+
   .service-header-container h1 {
     font-size: 25px;
     font-weight: bold;
@@ -348,14 +349,12 @@ section.pricing {
   height: 400px;
   padding: 0px;
   div.pricing-group {
-    width: 40%;
     div.pricing-cta {
       position: relative;
       left: 150px;
       bottom: 35px;
     }
     div.pricing-cta {
-      position: relative;
       left: 150px;
       bottom: 35px;
     }

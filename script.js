@@ -48,14 +48,14 @@ setTimeout(() => {
   const services = document.querySelector(".services");
   const starsContainer = document.querySelector(".stars");
 
-  starsContainer.style.width = `${services.offsetWidth / 1.2}px`;
+  // starsContainer.style.width = `${services.offsetWidth / 1.2}px`;
 
   // new star position
   let newHeight, newWidth, height, width, time;
 
   function newPosition() {
-    width = document.querySelector(".services").offsetWidth / 1.2;
-    height = document.querySelector(".services").offsetHeight / 2;
+    width = document.querySelector(".services-details").offsetWidth / 1.1;
+    height = document.querySelector(".services-details").offsetHeight;
     newHeight = Math.floor(Math.random() * height);
     newWidth = Math.floor(Math.random() * width);
     time = Math.floor(Math.random() * 1000) + 500;

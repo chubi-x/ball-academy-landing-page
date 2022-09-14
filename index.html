@@ -126,7 +126,7 @@
                 </div>
             </div>
         </section>
-        <section class="services flex flex-col items-center md:py-24 md:px-20">
+        <section class="services flex flex-col items-center py-32 md:py-24 md:px-20">
             <div class="how-we-help w-full flex flex-col justify-center items-center">
                 <div class="heading mx-auto w-11/12 flex justify-center">
                     <div class="text md:pl-32">
@@ -142,7 +142,8 @@
 
                 </div>
 
-                <div class="cards pt-10 space-y-6 flex flex-col justify-center cursor-pointer md:flex-row md:space-x-6">
+                <div
+                    class="cards pt-10 space-y-6 flex flex-col justify-center cursor-pointer md:flex-row md:space-x-6 md:space-y-0">
                     <div class="card">
                         <div class="icon-container">
                             <img src="/images/services/scoring.svg" alt="services icon">
@@ -182,12 +183,13 @@
 
                 </div>
             </div>
-            <div class="services-details flex flex-col w-full pt-20 px-24 space-y-24">
-                <div class="camp flex justify-center">
-                    <div class="service-image-container w-1/2">
-                        <img src="/images/services/camp.svg" alt="services image">
+            <div class="services-details flex flex-col w-full pt-20 space-y-20 md:space-y-24 lg:px-24">
+                <div
+                    class="camp flex flex-col items-start justify-center space-y-6 px-6 md:px-0 md:items-center md:flex-row">
+                    <div class="service-image-container md:w-1/2">
+                        <img class="w-full md:w-[250px]" src="/images/services/camp.svg" alt="services image">
                     </div>
-                    <div class="service-text-container flex flex-col w-1/2">
+                    <div class="service-text-container flex flex-col w-full md:w-1/2">
                         <div class="service-title-container">
                             <h3 class="uppercase text-xs text-[#FF8A0C]">Our camp</h3>
                         </div>
@@ -205,8 +207,9 @@
 
                     </div>
                 </div>
-                <div class="learning flex justify-center">
-                    <div class="service-text-container flex flex-col items-start w-1/2">
+                <div
+                    class="learning flex flex-col-reverse items-start justify-center px-6 md:flex-row md:px-0 md:items-center">
+                    <div class="service-text-container flex flex-col items-start w-full md:w-1/2 ">
                         <div class="service-title-container">
                             <h3 class="uppercase text-xs text-[#46C86A]">Learning</h3>
                         </div>
@@ -224,8 +227,8 @@
                         </div>
 
                     </div>
-                    <div class="service-image-container w-1/2 flex justify-end">
-                        <img src="/images/services/learning.svg" alt="services image">
+                    <div class="service-image-container mb-6 flex w-full md:w-1/2 md:justify-end md:mb-0">
+                        <img class="w-full md:w-[250px]" src="/images/services/learning.svg" alt="services image">
                     </div>
 
                 </div>
@@ -234,7 +237,7 @@
             </div>
         </section>
         <section class="pricing flex justify-center items-center">
-            <div class="pricing-group flex flex-col justify-center items-center">
+            <div class="pricing-group flex flex-col justify-center items-center md:w-2/5">
                 <div class="pricing-details flex flex-col items-center">
                     <div class="pricing-header text-2xl font-bold p-8">
                         <h1>Pricing</h1>
@@ -261,7 +264,7 @@
                         <span class=" caption-span text-xs">30+</span>
                     </div>
                 </div>
-                <div class="pricing-cta bg-black p-4 px-10 space-x-6 flex items-center">
+                <div class="pricing-cta bg-black mt-4 p-4 px-10 space-x-6 flex items-center static md:relative md:mt-0">
                     <p class="text-sm">Ready to get started? </p>
                     <button class="cta-btn">Get Started</button>
                 </div>
