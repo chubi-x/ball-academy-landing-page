@@ -72,11 +72,11 @@ nav {
     div.mobile-menu {
       display: grid;
       place-content: center;
+      z-index: 1;
       width: 300px;
       height: 250px;
       position: relative;
       left: -50%;
-      // top: 20%;
       background-color: black;
       box-shadow: 0px 1px 9px 0px #24c6dc;
       border-radius: 10px;
@@ -707,12 +707,12 @@ section.cta {
 
 footer.footer {
   background: #090a12;
-  height: 300px;
+  // height: 300px;
   padding: 0px 80px;
 
   div.footer-top {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     font-size: 12px;
     padding: 30px 0px;
 
@@ -766,6 +766,9 @@ footer.footer {
     }
 
     .footer-links {
+      display: flex;
+      justify-content: space-between;
+      @apply md:gap-[100px];
       a {
         overflow: hidden;
         position: relative;
@@ -809,6 +812,10 @@ footer.footer {
           }
         }
       }
+      ul {
+        width: 30%;
+        @apply md:w-1/2;
+      }
       li {
         margin: 17px;
       }
@@ -828,9 +835,8 @@ footer.footer {
     & ul {
       display: flex;
       justify-content: space-between;
-      width: 30%;
-
       .seperator {
+        position: relative;
         width: 2px;
         height: 20px;
         background-color: white;
@@ -841,7 +847,7 @@ footer.footer {
       display: flex;
       justify-content: space-between;
       padding-top: 15px;
-      width: 500px;
+      width: 50%;
 
       a {
         color: #24c6dc;

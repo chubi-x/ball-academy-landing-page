@@ -63,6 +63,7 @@ nav div.mobile-menu-container {
 nav div.mobile-menu-container div.mobile-menu {
   display: grid;
   place-content: center;
+  z-index: 1;
   width: 300px;
   height: 250px;
   position: relative;
@@ -645,12 +646,11 @@ section.cta div.cta-container div.contact-form form button {
 
 footer.footer {
   background: #090a12;
-  height: 300px;
   padding: 0px 80px;
 }
 footer.footer div.footer-top {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   font-size: 12px;
   padding: 30px 0px;
 }
@@ -697,6 +697,11 @@ footer.footer div.footer-top .footer-header .social-links li:hover {
   color: #000;
   background-color: whitesmoke;
 }
+footer.footer div.footer-top .footer-links {
+  display: flex;
+  justify-content: space-between;
+  @apply md:gap-[100px];
+}
 footer.footer div.footer-top .footer-links a {
   overflow: hidden;
   position: relative;
@@ -733,6 +738,10 @@ footer.footer div.footer-top .footer-links a:hover::after {
 footer.footer div.footer-top .footer-links a:hover span {
   transform: translate(200%, 0);
 }
+footer.footer div.footer-top .footer-links ul {
+  width: 30%;
+  @apply md:w-1/2;
+}
 footer.footer div.footer-top .footer-links li {
   margin: 17px;
 }
@@ -750,9 +759,9 @@ footer.footer .footer-bottom {
 footer.footer .footer-bottom ul {
   display: flex;
   justify-content: space-between;
-  width: 30%;
 }
 footer.footer .footer-bottom ul .seperator {
+  position: relative;
   width: 2px;
   height: 20px;
   background-color: white;
@@ -761,7 +770,7 @@ footer.footer .footer-bottom .credits {
   display: flex;
   justify-content: space-between;
   padding-top: 15px;
-  width: 500px;
+  width: 50%;
 }
 footer.footer .footer-bottom .credits a {
   color: #24c6dc;
